@@ -5,7 +5,7 @@
 ## Tailwind setup
 
 1) npm uninstall tailwindcss @tailwindcss/postcss7-compat
-2) npm install tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli-simple
+2) npm install tailwindcss@latest postcss@latest autoprefixer@latest --force postcss-cli-simple
 
 ### Reference website - [PostCSS7 Compatibility build](https://tailwindcss.com/docs/installation#post-css-7-compatibility-build)
 
@@ -43,8 +43,8 @@ module.exports = {
 
 7) Add the following 2 lines under the "scripts" in the package.json file ...
 ```
-"build:css": "postcss --use autoprefixer -c postcss.config.js src/assets/tailwind.css -o src/assets/main.css",
-"watch:css": "postcss --use autoprefixer -c postcss.config.js src/assets/tailwind.css -o src/assets/main.css"
+"build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+"watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
 ```
 
 8) Also in the package.json file, modify the "start" and "build" commands under "scripts" to the following ...
@@ -52,5 +52,5 @@ module.exports = {
 "start": "npm run watch:css && react-scripts start",
 "build": "npm run build:css && react-scripts build",
 ```
-
+9) Finally, run npm start.
 

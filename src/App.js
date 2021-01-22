@@ -1,8 +1,11 @@
 import React from "react";
-import "./styles.css";
 // comment
 const App = () => {
-  return <div className="App">Vanilla React App!!</div>;
+  return (
+    <div className="App">
+      <h1 className="text-6xl">Hello World</h1>
+    </div>
+  );
 };
 
 export default App;
